@@ -9,16 +9,18 @@ Dicas:
 - Considere que a palavra "Alice" pode aparecer em diferentes contextos e pontuações.
 """
 
+
 def contar_a_palavra_alice():
     pass
 
+
 def main():
     quantidade = contar_a_palavra_alice()
-    if quantidade
+    if quantidade:
         print(quantidade)
     else:
         print(f"A palavra 'Alice' aparece {quantidade} vezes no texto.")
 
+
 if __name__ == "__main__":
     main()
-
