@@ -24,7 +24,7 @@ def ler_csv(nome_arquivo, separador=","):
 
 def main():
     # Testando a função
-    resultado = ler_csv("dados_09.csv")
+    resultado = ler_csv("dados/dados_09.csv")
     if resultado is not None:
         print(resultado)
 

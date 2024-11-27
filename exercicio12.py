@@ -20,7 +20,7 @@ def filtrar_linhas(entrada, saida, palavra):
 
 
 def main():
-    filtrar_linhas("alice.txt", "alice_saida.txt", "Alice")
+    filtrar_linhas("dados/alice.txt", "alice_saida.txt", "Alice")
 
 
 if __name__ == "__main__":

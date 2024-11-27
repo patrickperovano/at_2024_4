@@ -24,7 +24,7 @@ def voo_mais_atrasado(dados):
 
 
 def main():
-    dados = ler_csv("dados_anac_2024.csv")
+    dados = ler_csv("dados/dados_anac_2024.csv")
     print("Voo percentualmente mais cancelado:", voo_mais_cancelado(dados))
     print("Companhias aéreas presentes:", listar_companhias(dados))
     print("Número do voo entre Fortaleza e Galeão com mais atrasos:", voo_mais_atrasado(dados))

@@ -1,6 +1,6 @@
 # Exercicio
 """
-Escreva um programa em Python que leia o arquivo 'alice.txt' e conte quantas vezes a palavra "Alice" aparece no texto.
+Escreva um programa em Python que leia o arquivo 'dados/alice.txt' e conte quantas vezes a palavra "Alice" aparece no texto.
 Para isso, utilize as funções de abertura e leitura de arquivos. Em seguida, imprima o resultado na tela.
 Certifique-se de que a contagem não depende de maiúsculas ou minúsculas (ou seja, considere 'Alice', 'alice' e 'ALICE' como a mesma palavra).
 

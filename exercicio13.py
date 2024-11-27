@@ -18,7 +18,7 @@ def remover_linhas_duplicadas(entrada, saida):
 
 def main():
     # Chame a função com os nomes dos arquivos
-    remover_linhas_duplicadas("entrada13.txt", "saida_duplicadas.txt")
+    remover_linhas_duplicadas("dados/entrada13.txt", "saida_duplicadas.txt")
 
 
 if __name__ == "__main__":

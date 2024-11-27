@@ -18,7 +18,7 @@ def identificar_livro_por_citacao(caminho_arquivo, citacao):
 
 def main():
     # Caminho do arquivo shakespeare.txt
-    caminho_arquivo = "shakespeare.txt"
+    caminho_arquivo = "dados/shakespeare.txt"
 
     # Testes das citações
     citacao1 = "To be, or not to be, that is the question"

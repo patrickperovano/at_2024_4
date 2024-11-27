@@ -11,7 +11,7 @@ def extrair_informacoes(nome_arquivo):
 
 # Testando a função
 def main():
-    for nome_arquivo in ["alice.txt", "shakespeare.txt"]:
+    for nome_arquivo in ["dados/alice.txt", "dados/shakespeare.txt"]:
         informacoes = extrair_informacoes(nome_arquivo)
         print(informacoes)
 
