@@ -12,8 +12,7 @@ Crie a função identificar_livro_por_citacao e teste-a com as seguintes citaç�
 
 
 def identificar_livro_por_citacao(caminho_arquivo, citacao):
-    # Esta função deve abrir o arquivo e verificar em qual livro a citação aparece.
-    pass  # Substitua este pass pela implementação da sua função
+    pass
 
 
 def main():
@@ -24,7 +23,7 @@ def main():
     citacao1 = "To be, or not to be, that is the question"
     print(f'Resultado para a citação 1: "{citacao1}" -> {identificar_livro_por_citacao(caminho_arquivo, citacao1)}')
 
-    citacao2 = "What's in a name? That which we call a rose\nBy any other name would smell as sweet;"
+    citacao2 = "What’s in a name? That which we call a rose\nBy any other name would smell as sweet;"
     print(f'Resultado para a citação 2: "{citacao2}" -> {identificar_livro_por_citacao(caminho_arquivo, citacao2)}')
 
 
