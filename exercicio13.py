@@ -1,6 +1,6 @@
 # Exercicio
 """
-Você recebeu um arquivo de texto chamado 'entrada.txt' que contém várias linhas. Seu objetivo é criar um programa que 
+Você recebeu um arquivo de texto chamado 'entrada13.txt' que contém várias linhas. Seu objetivo é criar um programa que 
 remova todas as linhas duplicadas desse arquivo e escreva cada linha única em um novo arquivo chamado 'saida.txt'. 
 Siga as instruções abaixo:
 

@@ -1,6 +1,6 @@
 # Exercicio
 """
-Utilizando a função da questão anterior através do "import exercicio10" ou "from exercicio10 import ler_csv" leia o arquivo dados_anac_2024.csv. Este arquivo contém dados de cancelamentos e atrasos de voos no Brasil.
+Utilizando a função da questão anterior através do "import exercicio09" ou "from exercicio09 import ler_csv" leia o arquivo dados_anac_2024.csv. Este arquivo contém dados de cancelamentos e atrasos de voos no Brasil.
 Crie as funções abaixo para responder as perguntas:
 
 a) Qual o voo que foi percentualmente mais cancelado?
