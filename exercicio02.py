@@ -5,10 +5,12 @@ Se o segundo número for zero, a função deve retornar a mensagem "Não é poss
 Utilize um bloco try-except para tratar a exceção de divisão por zero.
 """
 
-
 def dividir(num1, num2):
-    pass  # Implemente a lógica da função aqui
-
+    try:
+        resultado = num1 / num2
+        return resultado
+    except ZeroDivisionError:
+        return "Não é possível dividir por zero"
 
 def main():
     num1 = 10
@@ -22,7 +24,6 @@ def main():
 
     resultado = dividir(num1, num2)
     print("Resultado:", resultado)
-
 
 if __name__ == "__main__":
     main()

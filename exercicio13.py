@@ -11,15 +11,22 @@ Siga as instruções abaixo:
 Certifique-se de que o arquivo 'saida.txt' seja criado e que cada linha única apareça apenas uma vez.
 """
 
-
 def remover_linhas_duplicadas(entrada, saida):
-    pass  # Implemente sua solução aqui.
-
+    try:
+        with open(entrada, 'r', encoding='utf-8') as arquivo_entrada:
+            linhas = arquivo_entrada.readlines()
+        
+        linhas_unicas = list(set(linhas))
+        
+        with open(saida, 'w', encoding='utf-8') as arquivo_saida:
+            for linha in linhas_unicas:
+                arquivo_saida.write(linha)
+    except FileNotFoundError:
+        print(f"O arquivo {entrada} não foi encontrado.")
 
 def main():
     # Chame a função com os nomes dos arquivos
     remover_linhas_duplicadas("dados/entrada13.txt", "saida_duplicadas.txt")
-
 
 if __name__ == "__main__":
     main()

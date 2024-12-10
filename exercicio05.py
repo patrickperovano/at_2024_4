@@ -11,10 +11,8 @@ Sua função deve retornar o seguinte dicionário:
 
 """
 
-
 def listas_para_dicionario(chaves, valores):
-    return None
-
+    return dict(zip(chaves, valores))
 
 def main():
     chaves = ["nome", "idade", "cidade"]
@@ -22,7 +20,6 @@ def main():
 
     resultado = listas_para_dicionario(chaves, valores)
     print(resultado)  # Esperado: {'nome': 'Alice', 'idade': 30, 'cidade': 'São Paulo'}
-
 
 if __name__ == "__main__":
     main()

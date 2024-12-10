@@ -12,17 +12,41 @@ Certifique-se de que suas funções retornam os valores no formato "Mês/Ano" (p
 """
 
 import json
-
+from datetime import datetime
 
 def get_maior_ipca():
-    # Implemente a lógica para encontrar o maior IPCA
-    pass
+    try:
+        with open('dados_ibge_ipca.json', 'r', encoding='utf-8') as arquivo:
+            dados = json.load(arquivo)
+        
+        dados_filtrados = [item for item in dados if item['D2C'] == 2265]
+        
+        maior_ipca = max(dados_filtrados, key=lambda x: float(x['V']))
+        data_maior_ipca = datetime.strptime(maior_ipca['D1C'], '%Y%m')
+        mes_ano_maior = data_maior_ipca.strftime('%B/%Y')
 
+        return mes_ano_maior
+    except FileNotFoundError:
+        return "O arquivo 'dados_ibge_ipca.json' não foi encontrado."
+    except Exception as e:
+        return f"Ocorreu um erro: {e}"
 
 def get_menor_ipca():
-    # Implemente a lógica para encontrar o menor IPCA
-    pass
+    try:
+        with open('dados_ibge_ipca.json', 'r', encoding='utf-8') as arquivo:
+            dados = json.load(arquivo)
+        
+        dados_filtrados = [item for item in dados if item['D2C'] == 2265]
+        
+        menor_ipca = min(dados_filtrados, key=lambda x: float(x['V']))
+        data_menor_ipca = datetime.strptime(menor_ipca['D1C'], '%Y%m')
+        mes_ano_menor = data_menor_ipca.strftime('%B/%Y')
 
+        return mes_ano_menor
+    except FileNotFoundError:
+        return "O arquivo 'dados_ibge_ipca.json' não foi encontrado."
+    except Exception as e:
+        return f"Ocorreu um erro: {e}"
 
 def main():
     maior = get_maior_ipca()
@@ -30,7 +54,6 @@ def main():
 
     print(f"Maior IPCA acumulado para 12 meses: {maior}")
     print(f"Menor IPCA acumulado para 12 meses: {menor}")
-
 
 if __name__ == "__main__":
     main()

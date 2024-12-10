@@ -17,17 +17,30 @@ Retorno esperado:
 }
 """
 
-
 def ler_csv(nome_arquivo, separador=","):
-    pass  # Implementação a ser feita
-
+    try:
+        with open(nome_arquivo, 'r', encoding='utf-8') as arquivo:
+            linhas = arquivo.readlines()
+            cabeçalho = linhas[0].strip().split(separador)
+            dados = {chave: [] for chave in cabeçalho}
+            
+            for linha in linhas[1:]:
+                valores = linha.strip().split(separador)
+                for chave, valor in zip(cabeçalho, valores):
+                    if valor.isdigit():
+                        valor = int(valor)
+                    dados[chave].append(valor)
+        
+        return dados
+    except FileNotFoundError:
+        print("Arquivo não encontrado")
+        return None
 
 def main():
     # Testando a função
     resultado = ler_csv("dados/dados_09.csv")
     if resultado is not None:
         print(resultado)
-
 
 if __name__ == "__main__":
     main()

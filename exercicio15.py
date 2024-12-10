@@ -6,8 +6,8 @@ Caso o arquivo não exista, crie o arquivo com esse nome. Caso exista, adicione 
 
 
 def adicionar_tarefa(nome_arquivo, tarefa):
-    pass  # Implementar a função
-
+    with open(nome_arquivo, 'a', encoding='utf-8') as arquivo:
+        arquivo.write(tarefa + '\n')
 
 def main():
     # Exemplo de uso
@@ -17,7 +17,6 @@ def main():
 
     tarefa = "Fazer exercícios"
     adicionar_tarefa(nome_arquivo, tarefa)
-
 
 if __name__ == "__main__":
     main()

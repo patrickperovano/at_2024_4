@@ -14,16 +14,17 @@ escrever_arquivo('resultado.txt', 5)   # Isso deve escrever 25 no arquivo
 escrever_arquivo('resultado.txt', 'teste') # Isso deve escrever TESTE no arquivo
 """
 
-
 def escrever_arquivo(nome_arquivo, informacao):
-    pass
-
+    with open(nome_arquivo, 'w') as arquivo:
+        if isinstance(informacao, (int, float)):
+            arquivo.write(str(informacao ** 2))
+        elif isinstance(informacao, str):
+            arquivo.write(informacao.upper())
 
 def main():
     # Testes
     escrever_arquivo("resultado1.txt", 5)  # Deve escrever 25
     escrever_arquivo("resultado2.txt", "teste")  # Deve escrever TESTE
-
 
 if __name__ == "__main__":
     main()

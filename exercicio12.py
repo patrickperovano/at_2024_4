@@ -14,14 +14,18 @@ Siga os passos abaixo:
 filtrar_linhas('entrada.txt', 'saida.txt', 'palavra')
 """
 
-
 def filtrar_linhas(entrada, saida, palavra):
-    pass
-
+    try:
+        with open(entrada, 'r', encoding='utf-8') as arquivo_entrada:
+            with open(saida, 'w', encoding='utf-8') as arquivo_saida:
+                for linha in arquivo_entrada:
+                    if palavra in linha:
+                        arquivo_saida.write(linha)
+    except FileNotFoundError:
+        print(f"Arquivo {entrada} não encontrado.")
 
 def main():
     filtrar_linhas("dados/alice.txt", "alice_saida.txt", "Alice")
-
 
 if __name__ == "__main__":
     main()

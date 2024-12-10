@@ -11,15 +11,15 @@ Maria,9.0
 A função não deve utilizar bibliotecas externas e deve fazer uso apenas das funções built-in do Python.
 """
 
-
 def salvar_notas(notas, arquivo_saida):
-    return None  # Implemente sua função aqui
-
+    with open(arquivo_saida, 'w') as arquivo:
+        arquivo.write("Nome,Nota\n")
+        for aluno, nota in notas.items():
+            arquivo.write(f"{aluno},{nota}\n")
 
 def main():
     notas_alunos = {"João": 8.5, "Maria": 9.0, "Carlos": 7.0}
     salvar_notas(notas_alunos, "notas.csv")
-
 
 if __name__ == "__main__":
     main()

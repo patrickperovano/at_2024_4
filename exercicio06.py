@@ -9,18 +9,22 @@ Dicas:
 - Considere que a palavra "Alice" pode aparecer em diferentes contextos e pontuações.
 """
 
-
 def contar_a_palavra_alice():
-    pass
-
+    try:
+        with open('dados/alice.txt', 'r') as arquivo:
+            texto = arquivo.read().lower()
+            palavras = texto.split()
+            contador = sum(1 for palavra in palavras if 'alice' in palavra)
+        return contador
+    except FileNotFoundError:
+        return "O arquivo 'dados/alice.txt' não foi encontrado."
 
 def main():
     quantidade = contar_a_palavra_alice()
-    if quantidade:
-        print(quantidade)
-    else:
+    if isinstance(quantidade, int):
         print(f"A palavra 'Alice' aparece {quantidade} vezes no texto.")
-
+    else:
+        print(quantidade)
 
 if __name__ == "__main__":
     main()

@@ -12,10 +12,13 @@ Complete a função itens_faltantes que deve retornar a diferença entre os dois
 Dica: Utilize a operação de diferença entre sets do Python.
 """
 
-
 def itens_faltantes(items_possuidos, items_desejados):
-    return None
-
+    # Converter listas em sets
+    set_possuidos = set(items_possuidos)
+    set_desejados = set(items_desejados)
+    
+    # Retornar a diferença entre os sets
+    return set_desejados - set_possuidos
 
 # Versão de teste
 def main():
@@ -24,7 +27,6 @@ def main():
 
     faltando = itens_faltantes(possuidos, desejados)
     print(f"Itens faltando na lista de compras: {faltando}")
-
 
 if __name__ == "__main__":
     main()
